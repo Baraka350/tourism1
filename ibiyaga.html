@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakes and Rivers of Rwanda</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: url('https://via.placeholder.com/1920x600.png?text=Rwanda+Lake+View') no-repeat center center;
+            background-size: cover;
+            padding: 50px;
+            text-align: center;
+            color: white;
+            position: relative;
+            animation: fadeInHeader 2s ease-out;
+        }
+
+        @keyframes fadeInHeader {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 3em;
+            animation: fadeInText 2s ease-out;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Lakes and Rivers Info Section */
+        .lake-info-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 10px;
+        }
+
+        .lake-info {
+            width: 30%;
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .lake-info:hover {
+            transform: scale(1);
+        }
+
+        .lake-info img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .lake-info:hover img {
+            transform: scale(1.1);
+        }
+
+        .lake-info h3 {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 10px 0;
+            animation: fadeInText 1s ease-out;
+        }
+
+        .lake-info p {
+            padding: 0 15px 15px;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        /* Booking Form */
+        .booking-form {
+            background-color: #4CAF50;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            animation: slideInUp 2s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .booking-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-button {
+            background-color: #ffffff;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-button:hover {
+            background-color: #def4df;
+            color: white;
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="animate__animated animate__fadeIn" style="color:black">Explore the Beautiful Lakes and Rivers of Rwanda</h1>
+    </header>
+
+    <section class="lake-info-section">
+        <div class="lake-info animate-on-scroll">
+            <img src="capture.PNG" alt="Lake Kivu">
+            <h3>Lake Kivu</h3>
+            <p>Lake Kivu is one of Africa's Great Lakes, located in the western part of Rwanda. Known for its breathtaking views and water activities.</p>
+            <a href="kivu.html">learn more</a>
+        </div>
+        <div class="lake-info animate-on-scroll">
+            <img src="muhazi.PNG" alt="Lake Muhazi">
+            <h3>Lake Muhazi</h3>
+            <p>Lake Muhazi is located in the eastern province of Rwanda, a calm place with scenic views perfect for relaxation and water sports.</p>
+            <a href="#">learn more</a>
+        </div>
+        <div class="lake-info animate-on-scroll">
+            <img src="burera.PNG" alt="Lake Burera">
+            <h3>Lake Burera</h3>
+            <p>Lake Burera is found in the northern region of Rwanda, nestled between hills and providing an excellent spot for fishing and boating.</p>
+            <a href="#">learn more</a>
+        </div>
+        <div class="lake-info animate-on-scroll">
+            <img src="nyaba.PNG" alt="Nyabarongo River">
+            <h3>Nyabarongo River</h3>
+            <p>The Nyabarongo River flows through Rwanda and is one of the main tributaries of the Nile, offering incredible river tours.</p>
+            <a href="#">learn more</a>
+        </div>
+        <div class="lake-info animate-on-scroll">
+            <img src="none.png" alt="Akagera River">
+            <h3>Akagera River</h3>
+            <p>The Akagera River is an essential part of Rwanda’s ecosystem, with lush surroundings and wildlife-rich regions for safaris.</p>
+            <a href="#">learn more</a>
+        </div>
+    </section>
+
+    <section class="booking-form">
+        <h2>Book Your Adventure</h2>
+        <form>
+            <input type="text" class="form-input" placeholder="Name" required><br>
+            <input type="email" class="form-input" placeholder="Email" required><br>
+            <input type="tel" class="form-input" placeholder="Phone Number" required><br>
+            <textarea class="form-input" placeholder="Message or Special Request" required></textarea><br>
+            <button type="submit" class="form-button">Book Now</button>
+        </form>
+    </section>
+
+    <script>
+        // Adding scroll animation visibility trigger
+        document.addEventListener('scroll', function() {
+            var elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(function(element) {
+                var rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mammals of Rwanda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(back.PNG);
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 80px;
+            
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .animals {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .animal {
+            width: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .animal img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .description {
+            padding: 10px;
+            background-color: #ccb9c5
+        }
+
+        .h2 {
+            font-size: 40px;
+            color: #c1ecd3;
+            text-align: center;
+            margin: 90px;
+        }
+        .h2 h2:hover{
+            text-decoration: underline;
+            
+        }
+
+        .description p {
+            font-size: 14px;
+            
+            
+
+        }
+
+        /* Hover effect for the image */
+        .animal:hover img {
+            transform: scale(1.1); /* zooms the image */
+        }
+
+        .animal:hover {
+            transform: translateY(-10px); /* moves the whole animal block slightly up */
+        }
+    </style>
+</head>
+<body>
+    <h2  class="h2">WELCOME TO MAMMALS ANIMALS FOUND IN RWANDA</h2>
+
+    <section class="animals">
+        <!-- Volcanoes National Park -->
+        <div class="animal">
+            <img src="gorila.PNG" alt="Mountain Gorilla">
+            <div class="description">
+                <h2>Mountain gorilla</h2>
+                <p>Endemic to the Virunga mountains, found in Volcanoes National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="goldenmonkey.PNG" alt="Golden Monkey">
+            <div class="description">
+                <h2>Golden Monkey</h2>
+                <p>Found in Volcanoes National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="baboon.PNG" alt="Baboon">
+            <div class="description">
+                <h2>Baboon</h2>
+                <p>Found in Volcanoes, Nyungwe, and Akagera National Parks.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="colobusmonkey.PNG" alt="Colobus Monkey">
+            <div class="description">
+                <h2>Colobus Monkey</h2>
+                <p>Found in Nyungwe Forest and Volcanoes National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="redtailedmonkey.PNG" alt="Red-tailed Monkey">
+            <div class="description">
+                <h2>Red-tailed Monkey</h2>
+                <p>Found in Nyungwe Forest.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="bluemonkey.png" alt="Blue Monkey">
+            <div class="description">
+                <h2>Blue Monkey</h2>
+                <p>Found in Nyungwe Forest.</p>
+            </div>
+        </div>
+
+        <!-- Akagera National Park -->
+        <div class="animal">
+            <img src="buffalo.PNG" alt="Buffalo">
+            <div class="description">
+                <h2>Buffalo</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="elephant.PNG" alt="Elephant">
+            <div class="description">
+                <h2>Elephant</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="lionn.PNG" alt="Lion">
+            <div class="description">
+                <h2>Lion</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="leopard.PNG" alt="Leopard">
+            <div class="description">
+                <h2>Leopard</h2>
+                <p>Found in Akagera National Park, though rare.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="cheeter.PNG" alt="Cheetah">
+            <div class="description">
+                <h2>Cheetah</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <!-- Other Areas -->
+        <div class="animal">
+            <img src="giraffe.PNG" alt="Giraffe">
+            <div class="description">
+                <h2>Giraffe</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="zebra.PNG" alt="Zebra">
+            <div class="description">
+                <h2>Zebra</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="rhinoceros.PNG" alt="Rhinoceros">
+            <div class="description">
+                <h2>Rhinoceros</h2>
+                <p>Reintroduced to Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="impala.PNG" alt="Impala">
+            <div class="description">
+                <h2>Impala</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <!-- Additional Mammals -->
+        <div class="animal">
+            <img src="topiantelope.PNG" alt="Topi Antelope">
+            <div class="description">
+                <h2>Topi Antelope</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="warthog.PNG" alt="Warthog">
+            <div class="description">
+                <h2>Warthog</h2>
+                <p>Found in Akagera and other areas.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="eland.PNG" alt="Eland">
+            <div class="description">
+                <h2>Eland</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="roanantelope.PNG" alt="Roan Antelope">
+            <div class="description">
+                <h2>Roan Antelope</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="oribianterope.PNG" alt="Oribi Antelope">
+            <div class="description">
+                <h2>Oribi Antelope</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="duiker.png" alt="Duiker">
+            <div class="description">
+                <h2>Duiker</h2>
+                <p>Found in forests across Rwanda.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="sitatungantelope.PNG" alt="Sitatunga Antelope">
+            <div class="description">
+                <h2>Sitatunga Antelope</h2>
+                <p>Found in wetland areas like Akagera.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="hipoppotamus.PNG" alt="Hippopotamus">
+            <div class="description">
+                <h2>Hippopotamus</h2>
+                <p>Found in rivers and lakes of Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="crocodile.PNG" alt="Crocodile">
+            <div class="description">
+                <h2>Crocodile</h2>
+                <p>Found in Akagera and other bodies of water.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="mangoose.PNG" alt="Mongoose">
+            <div class="description">
+                <h2>Mongoose</h2>
+                <p>Found in various regions of Rwanda.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="bushpigs.PNG" alt="Bushpigs">
+            <div class="description">
+                <h2>Bushpigs</h2>
+                <p>Found in Nyungwe Forest.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="servalcat.PNG" alt="Serval Cat">
+            <div class="description">
+                <h2>Serval Cat</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="hyena.PNG" alt="Hyena">
+            <div class="description">
+                <h2>Hyena</h2>
+                <p>Spotted and brown hyenas found in Akagera.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="jackal.PNG" alt="Jackal">
+            <div class="description">
+                <h2>Jackal</h2>
+                <p>Found in Akagera National Park.</p>
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="wilddog.PNG" alt="Wild Dogs">
+            <div class="description">
+                <h2>Wild Dogs</h2>
+                <p>Rare, but occasionally spotted in Akagera.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

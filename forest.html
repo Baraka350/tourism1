@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forests in Rwanda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3e8e41;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            margin: 20px;
+        }
+        .forest-card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .forest-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .forest-image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+        .forest-image:hover {
+            transform: scale(1.05);
+        }
+        .forest-info {
+            max-width: 600px;
+        }
+        .forest-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3e8e41;
+            transition: color 0.3s ease;
+        }
+        .forest-name:hover {
+            color: #2c6b2e;
+        }
+        .location, .description {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Forests in Rwanda</h1>
+    <p>Explore some of the most beautiful forests across the country.</p>
+</header>
+
+<section id="forests-section"></section>
+
+<script>
+    const forests = [
+        {
+            name: "Nyungwe Forest",
+            location: "Located in the southwestern part of Rwanda, near the border with Burundi.",
+            description: "Nyungwe Forest is one of the largest montane forests in East Africa. It is home to diverse species of flora and fauna, including primates such as chimpanzees. It is a popular destination for nature lovers and researchers.",
+            image: "nyungwe2.png",
+            
+        
+        },
+        {
+            name: "Volcanoes National Park",
+            location: "Located in the northwest of Rwanda, near the border with Uganda and the Democratic Republic of Congo.",
+            description: "Volcanoes National Park is famous for its population of mountain gorillas. It is part of the Virunga Conservation Area and offers stunning views of the Virunga Mountains, making it a top destination for ecotourism.",
+            image: "gishwati.png"
+        },
+        {
+            name: "Gishwati Forest",
+            location: "Located in the western region of Rwanda, close to the Rubavu district.",
+            description: "Gishwati Forest is a small but beautiful forest that has been undergoing restoration efforts. It is home to diverse species of birds, primates, and other wildlife, providing a serene environment for nature walks.",
+            image: "ishyamba.png"
+        },
+        {
+            name: "Akagera National Park",
+            location: "Located in the eastern part of Rwanda, near the border with Tanzania.",
+            description: "Although Akagera is better known for its savannah, the park also contains a number of forested areas. The park is home to a wide range of wildlife including elephants, lions, and giraffes, and offers various ecosystems to explore.",
+            image: "mukur.png"
+        }
+    ];
+    
+    const section = document.getElementById("forests-section");
+
+
+    forests.forEach((forest, index) => {
+        const forestCard = document.createElement("div");
+        forestCard.classList.add("forest-card");
+
+        const img = document.createElement("img");
+        img.classList.add("forest-image");
+        img.src = forest.image;
+        img.alt = forest.name;
+
+        const forestInfo = document.createElement("div");
+        forestInfo.classList.add("forest-info");
+
+        const forestName = document.createElement("div");
+        forestName.classList.add("forest-name");
+        forestName.textContent = forest.name;
+
+        const forestLocation = document.createElement("div");
+        forestLocation.classList.add("location");
+        forestLocation.textContent = `Location: ${forest.location}`;
+
+        const forestDescription = document.createElement("div");
+        forestDescription.classList.add("description");
+        forestDescription.textContent = forest.description;
+
+        forestInfo.appendChild(forestName);
+        forestInfo.appendChild(forestLocation);
+        forestInfo.appendChild(forestDescription);
+
+        forestCard.appendChild(img);
+        forestCard.appendChild(forestInfo);
+
+        section.appendChild(forestCard);
+
+        // Add animation delay for staggered entry
+        setTimeout(() => {
+            forestCard.classList.add("visible");
+        }, index * 300); // Delay each forest card's animation
+    });
+</script>
+
+</body>
+</html>
