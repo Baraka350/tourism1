@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selena Hotel Rwanda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      animation: fadeIn 1s ease-out; /* Default fade-in animation for entire page */
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      padding: 20px;
+    }
+    .hotel-info, .menu, .image-gallery, .booking-form, .room-prices {
+      margin: 20px 0;
+    }
+    .menu-item {
+      display: inline-block;
+      width: 18%;
+      margin: 10px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .menu-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .menu-item img:hover {
+      transform: scale(1.05);
+    }
+    .menu-item h3 {
+      margin-top: 10px;
+    }
+    .menu-item p {
+      color: #333;
+      font-weight: bold;
+    }
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: none;
+      width: 100%;
+      bottom: 0;
+    }
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .carousel {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+    .carousel img {
+      width: 100%;
+      height: auto;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    .booking-form input, .booking-form select, .booking-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .booking-form button {
+      background-color: #333;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .room-price, .food-price {
+      font-size: 1.2em;
+      color: green;
+    }
+    .room-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .room-table th, .room-table td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    .room-table th {
+      background-color: #333;
+      color: white;
+    }
+    /* Keyframe for fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Selena Hotel, Rwanda</h1>
+    <p>Your luxurious stay in the heart of Rwanda</p>
+  </header>
+
+  <section class="hotel-info">
+    <h2>About Selena Hotel</h2>
+    <p>Selena Hotel offers a warm welcome, top-notch hospitality, and a wide variety of services to make your stay unforgettable. We focus on providing the best experience for every guest with a luxurious atmosphere and exceptional food options.</p>
+  </section>
+
+  <section class="menu">
+    <a href="#">view all</a>
+    <h2>Our Delicious Menu</h2>
+    
+    <div class="menu-item">
+      <img src="chicken.PNG" alt="Grilled Chicken">
+      <h3>Grilled Chicken</h3>
+      <p class="food-price">$15</p>
+      <p>A delicious grilled chicken served with your choice of sides.</p>
+    </div>
+    <div class="menu-item">
+      <img src="vegetable.PNG" alt="Vegetable Salad">
+      <h3>Vegetable Salad</h3>
+      <p class="food-price">$8</p>
+      <p>Fresh, crunchy vegetables with a zesty vinaigrette dressing.</p>
+    </div>
+    <div class="menu-item">
+      <img src="beef.PNG" alt="Beef Stew">
+      <h3>Beef Stew</h3>
+      <p class="food-price">$18</p>
+      <p>Rich, flavorful beef stew served with rice or bread.</p>
+    </div>
+    <div class="menu-item">
+      <img src="fish.PNG" alt="Fried Fish">
+      <h3>Fried Fish</h3>
+      <p class="food-price">$12</p>
+      <p>Crisp fried fish fillets, served with a side of fries or salad.</p>
+    </div>
+    <div class="menu-item">
+      <img src="fruite.PNG" alt="Fruit Platter">
+      <h3>Fruit Platter</h3>
+      <p class="food-price">$10</p>
+      <p>A fresh assortment of tropical fruits for a refreshing treat.</p>
+    </div>
+  </section>
+
+  <section class="room-prices">
+    <h2>Room and Suite Prices</h2>
+    <table class="room-table">
+      <thead>
+        <tr>
+          <th>Room Type</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Single Room</td>
+          <td>Cozy room perfect for solo travelers.</td>
+          <td class="room-price">$50/night</td>
+        </tr>
+        <tr>
+          <td>Double Room</td>
+          <td>Spacious room with a king-size bed, ideal for couples.</td>
+          <td class="room-price">$80/night</td>
+        </tr>
+        <tr>
+          <td>Suite</td>
+          <td>Luxurious suite with extra amenities and a stunning view.</td>
+          <td class="room-price">$120/night</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="image-gallery">
+    <h2>Explore Our Hotel</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="room1.PNG" alt="Hotel Image 1">
+        <img src="room2.PNG" alt="Hotel Image 2">
+        <img src="room3.PNG" alt="Hotel Image 3">
+        <img src="rom4.PNG" alt="Hotel Image 4">
+        <img src="room3.PNG" alt="Hotel Image 5">
+      </div>
+      <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+      <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="booking-form">
+    <h2>Book Your Stay</h2>
+    <form action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email address">
+      
+      <label for="room-type">Room Type</label>
+      <select id="room-type" name="room-type" required>
+        <option value="single">Single Room - $50/night</option>
+        <option value="double">Double Room - $80/night</option>
+        <option value="suite">Suite - $120/night</option>
+      </select>
+      
+      <label for="check-in">Check-in Date</label>
+      <input type="date" id="check-in" name="check-in" required>
+      
+      <label for="check-out">Check-out Date</label>
+      <input type="date" id="check-out" name="check-out" required>
+      
+      <label for="message">Special Requests</label>
+      <textarea id="message" name="message" rows="4" placeholder="Any special requests or preferences?"></textarea>
+      
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Selena Hotel, Rwanda. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const images = document.querySelectorAll('.carousel img');
+    const totalSlides = images.length;
+
+    function moveCarousel(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+      }
+      const offset = -currentSlide * 100;
+      document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+
+</body>
+</html>

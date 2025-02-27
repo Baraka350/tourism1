@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Kivu - Explore Rwanda's Beautiful Lake</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background: url(none.PNG) no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .nav {
+            background-color: #00796b;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 40px;
+            background-size: cover;
+        }
+        .info-card {
+            background-color: white;
+            width: 48%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow:4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .info-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+            background-size: cover;
+        }
+        .booking-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        .booking-form input, .booking-form textarea, .booking-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #f1c40f;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+        .none{
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Tour</title>
+
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            fetch('http://localhost:3000/book-tour', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: name, email: email })
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+       <nav>
+        <a href="#home.html">Home</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#activities">Activities</a>
+        <a href="#booking">Book a Tour</a>
+       </nav>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Welcome to Lake Kivu</h1>
+        <p>Discover Rwanda's Gem: Tranquil Waters, Scenic Views, and Adventure</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Lake Kivu Overview -->
+        <div class="overview">
+            <h2 class="section-title">About Lake Kivu</h2>
+            <p>Lake Kivu is one of Africa's largest and most beautiful lakes, nestled between Rwanda and the Democratic Republic of the Congo. The lake is renowned for its stunning views, serene atmosphere, and a wealth of outdoor activities.</p>
+        </div>
+
+        <!-- Attractions and Activities -->
+        <div class="info-section">
+            <div class="info-card">
+                <h3>Things to Do Around Lake Kivu</h3>
+                <ul>
+                    <li>Boat tours on the lake</li>
+                    <li>Hiking around the surrounding hills</li>
+                    <li>Visit the islands in the lake, including Amahoro and Idjwi Island</li>
+                    <li>Explore the nearby Kibuye and Gisenyi towns</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Attractions Near Lake Kivu</h3>
+                <ul>
+                    <li>Volcanoes National Park (Gorilla trekking)</li>
+                    <li>Nyungwe Forest (Chimpanzee tracking)</li>
+                    <li>Explore local markets and crafts in Gisenyi</li>
+                    <li>Visit the Congo Nile Trail</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <div class="gallery">
+            <h2 class="section-title">Lake Kivu Gallery</h2>
+            <div class="info-section">
+                <div class="info-card">
+                    <img src="capture.PNG" alt="Lake Kivu View 1">
+                    <img src="capture.PNG" alt="Lake Kivu View 1">
+                </div>
+                <div class="none">
+                    <img src="kivu2.PNG" alt="Lake Kivu View 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Section -->
+        <div class="booking" id="booking">
+            <h2 class="section-title">Book Your Tour to Lake Kivu</h2>
+            <div class="booking-form">
+                <h3>Reserve Your Spot for a Tour</h3>
+                <form action="submit_booking.php" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="date">Tour Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="tour-type">Tour Type:</label>
+                    <select id="tour-type" name="tour-type" required>
+                        <option value="boat-tour">Boat Tour</option>
+                        <option value="hiking">Hiking around the lake</option>
+                        <option value="island-tour">Island Exploration</option>
+                    </select>
+
+                    <label for="special-request">Special Requests:</label>
+                    <textarea id="special-request" name="special-request" rows="4"></textarea>
+
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <footer>
+            <p>&copy; 2025 Our Hospitality | All Rights Reserved</p>
+            <div class="social-icons">
+               <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

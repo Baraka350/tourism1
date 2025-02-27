@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Background for One Div</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f0f0f0;
+    }
+
+    .cont {
+      text-align: center;
+    }
+
+    .other-content {
+      padding: 20px;
+      text-align: center;
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      height: 50%;
+      width: 100vh;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: expanded;
+      text-align: left;
+    }
+
+    .background-slide {
+      width: 100%;
+      height: 100vh;
+      background: url(none.PNG) no-repeat center center/cover;
+      animation: slideBackground 18s infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      background-color: #f0f0f0;
+    }
+
+    @keyframes slideBackground {
+      0% {
+        background-image: url(Capture.PNG);
+      }
+      33% {
+        background-image: url(kk.PNG);
+      }
+      66% {
+        background-image: url(none.PNG);
+      }
+      100% {
+        background-image: url(hono.PNG);
+      }
+    }
+
+    .background-slide h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .background-slide p {
+      font-size: 1.5rem;
+    }
+
+    .word {
+      font-family: Arial;
+      font-weight: 200;
+      font-size: medium;
+    }
+
+    .btn1 button {
+      position: relative;
+      display: block;
+      margin: 0 20px;
+      border: none;
+      color: white;
+      background: #222;
+      padding: 17px 60px;
+      text-transform: lowercase;
+      font-size: 22px;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgb(0, 0, 0, .2);
+      overflow: hidden;
+    }
+
+    button:hover {
+      box-shadow: 0 5px 30px rgb(0, 0, 0, .2);
+    }
+
+    .btn1 button::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      height: 300%;
+      width: 100%;
+      transition: all .5s ease-in-out;
+      overflow: hidden;
+      background: #78c7d2;
+      transform: translate(-98%, -25%) rotate(45deg);
+    }
+
+    .btn1 button:hover::after {
+      transform: translate(-9%, -25%) rotate(45deg);
+    }
+
+    button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav a {
+      position: relative;
+      font-size: 1.1em;
+      color: #333;
+      text-decoration: none;
+      padding: 6px 20px;
+      transition: .5s;
+      border-radius: 15px;
+    }
+
+    nav a:hover { 
+      color: #0ef;
+    }
+
+    nav a span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-bottom: 2px solid #0ef;
+      border-radius: 15px;
+      transform: scale(1) translateY(50px);
+      opacity: 0;
+      transition: .5s;
+    }
+
+    nav a:hover span {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-slide">
+    <h1>Find Your Next Stay</h1>
+  </div>
+
+  <div>
+    <div class="other-content">
+      <span>ABOUT US</span>
+      <p class="word">
+        At [Tour Rwanda (TR)], we believe travel is more than just a trip—it’s an experience 
+        that enriches the soul, broadens horizons, and creates memories that last a lifetime. 
+        Whether you’re seeking the serenity of nature, the vibrancy of cultural festivals, or 
+        an adventurous escape, we are here to make it happen.
+      </p>
+    </div>
+
+    <div class="btn1">
+      <button><span>Learn more</span></button>
+    </div>
+
+    <nav class="cont">
+      <a href="#">Lakes<span></span></a>
+      <a href="#">Forest<span></span></a>
+      <a href="#">Hotels<span></span></a>
+      <a href="#">Animals<span></span></a>
+      <a href="#">Cultural<span></span></a>
+    </nav>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First page</title>
+<style>
+  .cont{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    font-size: x-large;
+
+  }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+.other-content {
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 50%;
+  width: 100vh;
+  font-weight:bold;
+  font-style: normal;
+  font-stretch: expanded;
+  text-align: left;
+}
+.background-slide {
+  width: 100%;
+  height: 90vh;
+  background: url() no-repeat center center/cover;
+  animation: slideBackground 18s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+@keyframes slideBackground {
+  0% {
+    background-image: url(hono.PNG);
+  }
+  33% {
+    background-image: url(kivu.PNG);
+  }
+  66% {
+    background-image: url(virunga.PNG);
+  }
+  100% {
+    background-image: url(none.PNG);
+  }
+  
+}
+.background-slide h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.background-slide p {
+  font-size: 1.5rem;
+}
+.rwanda{
+  border: #f0f0f0;
+  color:rgb(236, 231, 231);
+  font-family: 'Times New Roman', Times, serif;
+}
+.h1{
+    position: static;
+    text-align: left;
+    font-weight: 500;
+}
+
+   
+
+.word{
+    font-family: Arial;
+    font-weight: 200;
+    font-size: medium;
+    animation: fadeInRight 2s ease;
+}
+.btn1 button{
+  position: relative;
+  display: block;
+  margin: 0 20px;
+  border: none;
+  color: white;
+  background: #222;
+  padding: 17px 60px;
+  text-transform: lowercase;
+  font-size: 22px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgb(0,0,0,.2);
+  overflow: hidden;
+}
+button:hover{
+  box-shadow: 0 5px 30px rgb(0,0,0,.2);
+}
+.btn1 button:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 300%;
+  width: 100%;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+.btn1 button::after{
+  background: #78c7d2;
+  transform: translate(-98%, -25%) rotate(45deg);
+}
+.btn1:hover button:after{
+  transform: translate(-9%, -25%) rotate(45deg);
+}
+button span{
+  position: relative;
+  z-index: 1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+} 
+nav a {
+  position: relative;
+  font-size: 1.1em;
+  color:#333;
+  text-decoration: none;
+  padding: 6px 20px;
+transition: .5s;
+border-radius: 15px;
+}
+nav a:hover { 
+  color: #0ef;
+  
+}
+nav a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-bottom: 2px solid #0ef;
+  border-radius: 15px;
+  transform: scale(1) translateY(50px);
+  opacity: 0;
+  transition: .5s; 
+  justify-content: space-between;
+}
+nav a:hover span {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+.other-content span {
+  font-size: 35px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: arial;
+  text-decoration:underline;
+  animation: fadeInRight 2s ease;;
+}
+@media screen and (max-width: 768px){
+  .other-content{
+    font-size: 45px;
+        margin-top: 30px;
+  }
+}
+.words{
+        margin: 0px;
+        padding: 0px 40px;
+        width: 100%;
+        flex-direction: column;
+    }
+@keyframes fadeInUp{
+    0%{
+        opacity: 0.5;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 1;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(0px);
+    }
+}
+ 
+        .signup-btn{
+          top: 40px;
+          right: 30px;
+          position: absolute;
+          text-decoration: none;
+          color: #fff;
+          border: 2px solid transparent;
+          border-radius: 20px;
+          background-image: linear-gradient(#42454a,#42454a),radial-gradient(circle at top left, #fd00da, #19d7f8);
+          background-origin: border-box;
+          background-clip: content-box,border-box;
+
+        }
+        .signup-btn span{
+          display: block;
+          padding: 8px 18px;
+        }
+        .container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255,255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;  
+    backdrop-filter: blur(4px) saturate(180%);
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+::placeholder{
+    color: white;
+}
+.search-bar button img{
+width: 25px;
+}
+.search-bar button img{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+    }
+    .btn7{
+      background-color: transparent;
+      opacity: 0.6;
+      background-color: cover;
+      border-radius: 50%;
+    }
+    .logo {
+      background-color: cover;
+      width: 100px;
+      height: 100px;
+      
+    }
+    .logo2 {
+      width: 100px;
+      position: fixed;
+      border-radius: 80px;
+      top: 10px;
+      left: 10px;
+      background-color: transparent;
+    }
+    .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: 'Poppins',verdana;
+        }
+
+        .section h2 {
+            color: #6CBB3C;
+            margin-bottom: 20px;
+            
+        }
+
+        .section img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            height: 40%;
+
+        }
+
+        .section p {
+            margin-top: 10px;
+            font-family: 'Poppins' , ;
+        }
+
+        .map-icon {
+            font-size: 18px;
+            color: #6CBB3C;
+            margin-right: 5px;
+        }
+
+        @keyframes appear {
+            from { opacity: 0;
+            scale: 0.5; 
+        }
+            to { 
+                opacity: 1;
+                scale: 1; 
+            }
+        }
+
+       .content{
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+       }
+       .body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #d1d1d1;
+           
+        }
+        .honore
+        {
+            position: relative;
+            font-size: 14svh;
+            color: #d1d1d1;
+            -webkit-text-stroke: 0.3vw #d1d1d1;
+            text-transform: uppercase;
+            font-family: 'Poppons' , sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.honore::before 
+        {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      color: #959292;
+      -webkit-text-stroke: 0vw #7e8087;
+      border-right: 2px solid #676969;
+      overflow: hidden;
+      animation: animate 10s linear infinite;
+        }
+@keyframes animate
+        {
+    0%,10%,100%
+    {
+    width: 0;
+  }
+    70%,90%{
+    width: 100%;
+ }
+}
+.hero{
+    background-color: #f8f8f8;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "arial" , sans-serif;
+}
+.heading{
+    color: #ff6347;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+.hero-content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+}
+.hero-content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.hero-content p{
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: #666;
+}
+.hero-content button{
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+    border:none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.hero-content button:hover{
+   background-color: #ff6347;
+   transform: scale(1.1);
+}
+.hero-image{
+    flex: 1;
+    width: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+img{
+    width: 100%;
+    height: auto;
+    border-radius:  10px;
+}
+@media screen and (max-width: 768px) {
+    .heading h1{
+        font-size: 45px;
+        margin-top: 30px;
+    }
+    .hero{
+        margin: 0px;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+    }
+    .hero-content{
+        width: 100%;
+        margin: 35px 0px; 
+    }
+    .hero-content h2{
+        font-size: 30px;
+    }
+    .hero-content p{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .hero-content button{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .hero-image{
+        width:100%;
+        padding-top: 16rem;
+    }
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0.5;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 1;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(0px);
+    }
+}
+footer {
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer .social-icons {
+  margin-bottom: 20px;
+}
+
+footer .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #222;
+  border-radius: 50%;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer .social-icons a:hover {
+  background-color: #393434;
+  
+}
+footer h3{
+  font-family:Arial;
+  padding: 50px;
+  text-decoration: underline;
+}
+
+footer h3:hover{
+  color: #333;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+
+}
+
+footer nav ul li {
+  display: inline;
+  margin: 19 15px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer nav ul li a:hover {
+  opacity: 1;
+}
+
+footer .copyright {
+  font-size: 14px;
+  background-color: #0000;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="background-slide">
+      <a href="home.html"><img src="LOGO.png" alt="company logo" class="logo2"></a>
+    <a href="index.html" class="signup-btn"><span>sign up</span></a>
+   
+    <div class="container">
+      <form action="https://www.google.com/search" method="get" class="search-bar">
+          <input type="text" placeholder="search anything" name="q">
+          <button type="submit"><img src="search.png" class="btn7"></button>
+      </form>
+  </div>
+  </div>
+      <nav class="cont">
+        <a href="ibiyaga.html">Lakes<span></span></a>
+        <a href="forest.html">Forest<span></span></a>
+        <a href="hotel2.html">Hotels<span></span></a>
+        <a href="animals.html">Animals<span></span></a>
+        <a href="#">cultural<span></span></a>
+      </nav>
+      <div class="body">
+        <h2 data-text="tour_rwanda..." class="honore">tour rwanda...</h2>
+       </div>
+       <section class="hero">
+        <div class="heading">
+            <h1>About us</h1>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to our website</h2>
+                <p>Discover the latest trends and innovation in techinology, design, <br>
+                and more. our team of experts brings you the best content and <br>
+            insight to help you stay ahead of curve</p>
+            <button class="cta-button">lern more</button>
+         </div>
+         <div class="hero-image">
+            <img src="lion.PNG">
+         </div>
+        </div>
+    </section>
+      <div class="content">
+        <div class="section">
+            <h2>Beautiful City: Kigali</h2>
+            <img src="kigali.PNG" alt="Kigali">
+            <p>
+                Kigali, the capital city of Rwanda, is a shining example of urban development <br>
+                 and environmental sustainability. Known for its immaculate streets and vibrant <br> neighborhoods, Kigali offers a blend of modernity and tradition. <br>
+                  The city is also a hub for business <br>
+                  and innovation, making it a significant player in East Africa. <br>
+                   Tourists and locals alike enjoy the lively markets, stunning landscapes, <br>
+                   and diverse dining options that Kigali has to offer.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Cultural Heritage</h2>
+            <img src="hertage.PNG" alt="Cultural Heritage">
+            <p>
+                Rwanda's rich cultural heritage is a testament to its history and traditions. <br>
+                The country's culture is celebrated through traditional dance, music, and crafts. <br>
+                 One of the most iconic cultural expressions is the Intore dance, performed by warriors <br>
+                  in intricate costumes. Rwanda's cultural festivals and museums offer a deep dive into its <br>
+                   artistic legacy, while community gatherings and ceremonies keep traditions alive. The strong <br>
+                    sense of identity and pride in their heritage is evident in every aspect of Rwandan life. <br>
+            </p>
+        </div>
+        <div class="section">
+            <h2>Wildlife: Mountain Gorillas</h2>
+            <img src="gorilla.PNG" alt="Mountain Gorillas">
+            <p>
+                Rwanda is world-renowned for its wildlife, particularly <br>  the endangered mountain gorillas and rwanda is beautiful country. <br>
+                These majestic animals can be found in Volcanoes National Park, <br> a lush and protected area that attracts eco-tourists from around the globe. <br>
+                 Trekking to see the gorillas in their natural habitat is a once-in-a-lifetime experience. <br>  The conservation efforts in Rwanda have not only helped <br>
+                  to protect these incredible creatures but also provided <br> a source of sustainable tourism that benefits local communities.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Location <i class="fas fa-map-marker-alt map-icon"></i></h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020806.7523209801!2d29.22092694422706!3d-1.9421549311499893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c29654e73840e3%3A0x7490b026cbcca103!2sRwanda!5e0!3m2!1sen!2srw!4v1739432143051!5m2!1sen!2srw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>
+                Rwanda is a landlocked country located in the heart of East-Central Africa. <br> It shares borders with Uganda to the north, Tanzania to the east, Burundi to the south, <br> and the Democratic Republic of the Congo to the west. Known as the "Land of a Thousand Hills, <br> " Rwanda is characterized by its rolling landscapes and diverse ecosystems. The country's strategic location and breathtaking <br> scenery make it a unique destination for travelers looking to explore <br> the natural beauty and cultural richness of Africa.
+            </p>
+        </div>
+       
+    </div>
+    <footer>
+      <h3>Follow us on</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Our Team</a></li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        Copyright ©2025; Designed by HONORE
+      </div>
+    </footer>
+</body>
+</html>
